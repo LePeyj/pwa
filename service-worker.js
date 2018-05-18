@@ -1,5 +1,5 @@
-var dataCacheName = 'AOVData-v1';
-var cacheName = 'AOVPWA-final-1';
+var dataCacheName = 'AOV';
+var cacheName = 'AOV';
 var filesToCache = [
   '/',
   '/index.html',
