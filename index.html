@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky-High Airport Arrivals</title>
     <link async rel="stylesheet" href="./styles/style.css">
+    <link async rel="stylesheet" href="./styles/inline.css">
     <script src="./scripts/main.js"></script>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#29BDBB">
@@ -19,8 +20,26 @@
         </div>
     </header>
     <div class="container">
-        <div id="main" class="content">
-        </div>
+        <main class="main">
+          <div class="login-container">
+            <h2>User Login</h2>
+
+              <div class="login-form">
+                  <form method='post'>
+                      <label>
+                        <span>Username:</span>
+                        <input type="text" name="username" id="username" placeholder="Input username" class="form-control" ng-model="username" autocomplete="on">
+                      </label>
+                      <label>
+                        <span>Password:</span>
+                        <input type="password" name="password" id="password" placeholder="Input password" class="form-control" ng-model="password" autocomplete="on">
+                      </label>
+                      <button class="btn" id="loginSubmit" ng-click="check_credentials()">Submit</button>
+                  </form>
+              </div>
+            <span id="message"></span>
+          </div>
+      </main>
     </div>
 </body>
 
