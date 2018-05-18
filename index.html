@@ -1,91 +1,27 @@
-<!--
- Copyright 2016 Google Inc.
- 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
- 
-      http://www.apache.org/licenses/LICENSE-2.0
- 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
 <!DOCTYPE html>
-<html>
+<html class="js no-touchevents" lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="canonical" href="https://lepeyj.github.io/pwa/">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#db5945">
-  <meta name="mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky-High Airport Arrivals</title>
+    <link async rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/main.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#29BDBB">
   <link rel="icon" sizes="192x192" href="images/icons/icon-192x192.png">
-  <title>AOV PWA</title>
-  <link rel="stylesheet" type="text/css" href="styles/inline.css">
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-
-  <!-- TODO add manifest here -->
-  <link rel="manifest" href="manifest.json">
-  <!-- Add to home screen for Safari on iOS -->
-  <!--
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="AOV PWA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
-  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body ng-app='angular_post_demo' ng-controller='sign_up'>
 
-  <header class="header">
-    <h1 class="header__title">AOV INVENTORY SYSTEM</h1>
-  </header>
-
-  <main class="main">
-      <div class="login-container">
-        <h2>User Login</h2>
-          
-          <div class="login-form">
-              <form method='post'>
-                  <label>
-                    <span>Username:</span>
-                    <input type="text" name="username" id="username" placeholder="Input username" class="form-control" ng-model="username" autocomplete="on">
-                  </label>
-                  <label>
-                    <span>Password:</span>
-                    <input type="password" name="password" id="password" placeholder="Input password" class="form-control" ng-model="password" autocomplete="on">
-                  </label>
-                  <button class="btn" id="loginSubmit" ng-click="check_credentials()">Submit</button>
-              </form>
-          </div>
-        <span id="message"></span>
-      </div>
-  </main>
-        <span id="status"></span>
-        <input type="text" name="key" id="key" placeholder="Input key" class="form-control" autocomplete="on">
-        <button class="btn" id="getPerson">Submit</button>
-  <!--<input type="file" accept="image/*" capture>-->
-
-  <script src="scripts/app.js"></script>
-  <script src="scripts/indexedDB.js"></script>
-  
-  <script>
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-
-      .then((registration) => {
-        console.log('SW registered');
-      })
-      .catch((err) => {
-        console.log('SW error', err);
-      });
-    }
-  </script>
+<body>
+    <header>
+        <div class="content">
+            <h3>Arrivals</h3>
+        </div>
+    </header>
+    <div class="container">
+        <div id="main" class="content">
+        </div>
+    </div>
 </body>
+
 </html>
