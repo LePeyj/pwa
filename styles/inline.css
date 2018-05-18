@@ -4,6 +4,10 @@
     color: #636b6f;
 }
 
+body {
+  background: #ececec;
+}
+
 .header__title {
     color: #fff;
 }
@@ -16,7 +20,7 @@
 .login-container {
     max-width: 370px;
     width: 100%;
-    margin: 40px auto 0px;
+    margin: 90px auto 0px;
     box-shadow: 2px 2px 2px #ccc;
     padding: 20px;
     background-color: #fff;
