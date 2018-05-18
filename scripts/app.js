@@ -14,7 +14,7 @@
 
       var request = $http({
         method: "post",
-        url: "http://localhost/projects/inventory%20tracking%20system/php/loginController.php",
+        url: "https://localhost/projects/inventory%20tracking%20system/php/loginController.php",
         data: {
           username: $scope.username,
           pass: $scope.password
